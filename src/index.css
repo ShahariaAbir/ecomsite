@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply text-gray-300 hover:text-purple-400 transition-colors;
+  }
+
+  .mobile-nav-link {
+    @apply block px-3 py-2 text-base font-medium text-gray-300 hover:text-purple-400 transition-colors;
+  }
+
+  .btn-primary {
+    @apply px-6 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition-colors;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-md bg-white/10 rounded-xl p-6;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-purple-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-purple-700;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
